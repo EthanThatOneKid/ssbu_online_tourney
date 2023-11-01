@@ -1,7 +1,9 @@
 {
   "lock": "./deno.lock",
   "tasks": {
-    "all": "deno lint && deno fmt",
+    "udd": "deno run -r --allow-read=. --allow-write=. --allow-net https://deno.land/x/udd/main.ts deps.ts && deno task lock",
+    "lock": "deno cache --lock=deno.lock --lock-write deps.ts",
+    "all": "deno task udd && deno lint && deno fmt",
     "start": "deno run -A main.ts"
   }
 }
