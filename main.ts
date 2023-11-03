@@ -67,18 +67,39 @@ function renderPageHTML(props: PageProps) {
     <head>
       <meta charset="UTF-8" />
       <title>Super Smash Bros. Ultimate | Online Tourney</title>
+      <meta name="robots" content="index,follow">
+      <meta name="googlebot" content="index,follow">
+      <meta property="og:title" content="Super Smash Bros. Ultimate | Online Tourney">
+      <meta property="og:description" content="Super Smash Bros. Ultimate | Online Tourney - ${props.remainingTime} remaining time until the next ${props.next.name} tourney.">
+      <meta property="og:type" content="website">
+      <meta property="og:image" content="https://ssb.wiki.gallery/images/5/5e/SSBU_Panoramic.png">
+
+      <style>
+        img {
+          width: 100%;
+        }
+      </style>
     </head>
     <body>
       <h1>Super Smash Bros. Ultimate | Online Tourney</h1>
+
       <p><b>Current date</b>: <time datetime="${props.date}">${props.date}</time></p>
       <p><b>Remaining time</b>: ${props.remainingTime} (<code>${props.discordTime}</code>)</p>
-      
+
       <h2>Current tourney</h2>
       ${renderOnlineTourneyHTML(props.current)}
-      
+
       <h2>Next tourney</h2>
       ${renderOnlineTourneyHTML(props.next)}
-      
+
+      <a href="https://www.ssbwiki.com/Online_Tourney">
+        <img src="https://ssb.wiki.gallery/images/5/5e/SSBU_Panoramic.png" alt="Super Smash Bros. Ultimate everyone is here" />
+      </a>
+
+      <footer>
+        <p>Source code: <a href="https://github.com/EthanThatOneKid/ssbu_online_tourney">etok.codes/ssbu_online_tourney</a>!</p>
+      </footer>
+
       <script src="https://dohliam.github.io/dropin-minimal-css/switcher.js" type="text/javascript"></script>
     </body>
   </html>`;
