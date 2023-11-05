@@ -84,13 +84,13 @@ function renderPageHTML(props: PageProps) {
       <h1>Super Smash Bros. Ultimate | Online Tourney</h1>
 
       <p><b>Current date</b>: <time datetime="${props.date}">${props.date}</time></p>
-      <p><b>Remaining time</b>: ${props.remainingTime} (<code>${props.discordTime}</code>)</p>
 
       <h2>Current tourney</h2>
       ${renderOnlineTourneyHTML(props.current)}
 
       <h2>Next tourney</h2>
       ${renderOnlineTourneyHTML(props.next)}
+      <p><b>Tourney begins</b>: ${props.remainingTime} (<code>${props.discordTime}</code>)</p>
 
       <a href="https://www.ssbwiki.com/Online_Tourney">
         <img src="https://ssb.wiki.gallery/images/5/5e/SSBU_Panoramic.png" alt="Super Smash Bros. Ultimate everyone is here" />
