@@ -100,7 +100,7 @@ function renderPageHTML(props: PageProps) {
         <p>Source code: <a href="https://github.com/EthanThatOneKid/ssbu_online_tourney">etok.codes/ssbu_online_tourney</a>!</p>
       </footer>
 
-      <script src="https://dohliam.github.io/dropin-minimal-css/switcher.js" type="text/javascript"></script>
+      <script src="https://ethanthatonekid.github.io/dropin-minimal-css/switcher.js" type="text/javascript"></script>
     </body>
   </html>`;
 }
